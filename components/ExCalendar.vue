@@ -92,23 +92,25 @@
       </div>
     </v-calendar>
   </div>
-  <div class='columns'>
-    <div class='column'></div>
-    <div class='column is-two-thirds content is-size-5 has-text-centered'>
-      <p>
-        VCalendar is a plugin for Vue.js that let's you build calendars with
-          <a class='has-text-primary' href='#' @click.prevent='display = "highlights"'>highlighted&nbsp;regions</a>,
-          <a class='has-text-primary' href='#' @click.prevent='display = "dots"'>dots</a>,
-          <a class='has-text-primary' href='#' @click.prevent='display = "bars"'>bars</a> and even
-          <a class='has-text-primary' href='#' @click.prevent='display = "popovers"'>popovers</a>.
-      </p>
-      <p>
-        It is <a class='has-text-primary' href='https://docs.vcalendar.io' target='_blank'>well documented</a> with a <a class='has-text-primary' href='https://docs.vcalendar.io/api' target='_blank'>carefully crafted API</a> that was built with <a class='has-text-primary' href='#' @click.prevent='applyTheme'>customization</a> in mind.
-      <p>
-        Most importantly, it's a calendar your users will enjoy using.
-      </p>
+  <div class='container'>
+    <div class='columns'>
+      <div class='column'></div>
+      <div class='column is-two-thirds content is-size-5 has-text-centered'>
+        <p>
+          VCalendar is a plugin for Vue.js that let's you build calendars with
+            <a class='has-text-primary' href='#' @click.prevent='display = "highlights"'>highlighted&nbsp;regions</a>,
+            <a class='has-text-primary' href='#' @click.prevent='display = "dots"'>dots</a>,
+            <a class='has-text-primary' href='#' @click.prevent='display = "bars"'>bars</a> and even
+            <a class='has-text-primary' href='#' @click.prevent='display = "popovers"'>popovers</a>.
+        </p>
+        <p>
+          It is <a class='has-text-primary' href='https://docs.vcalendar.io' target='_blank'>well documented</a> with a <a class='has-text-primary' href='https://docs.vcalendar.io/api' target='_blank'>carefully crafted API</a> that was built with <a class='has-text-primary' href='#' @click.prevent='applyTheme'>customization</a> in mind.
+        <p>
+          Most importantly, it's a calendar your users will enjoy using.
+        </p>
+      </div>
+      <div class='column'></div>
     </div>
-    <div class='column'></div>
   </div>
 </div>
 </template>
