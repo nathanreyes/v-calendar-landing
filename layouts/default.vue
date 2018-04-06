@@ -24,7 +24,9 @@
         </svg>
       </a>
     </div>
-    <nuxt/>
+    <div class='layout-main'>
+      <nuxt/>
+    </div>
     <footer class='layout-footer'>
       <div class='container'>
         <p>
@@ -38,7 +40,15 @@
 <style lang='scss' scoped>
 @import '../assets/styles/vars.scss';
 
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .navbar {
+  flex-grow: 0;
+  flex-shrink: 0;
   > .container {
     display: flex;
     justify-content: center;
@@ -52,11 +62,13 @@
   }
 }
 
-.content {
+.layout-main {
   flex: 1;
 }
 
 .layout-footer {
+  flex-grow: 0;
+  flex-shrink: 0;
   color: $footer-color;
   background-color: $footer-bg-color;
   border-top: 1px solid $footer-border-color;

@@ -61,18 +61,19 @@
           <p class='is-size-4 has-text-centered has-text-light'>
             Need help integrating or customizing VCalendar for your web applications?
           </p>
-          <form class='form' name='help' method='POST' netlify netlify-honeypot='trigger'>
+          <form class='form' name='help' method='POST' data-netlify='true' netlify-honeypot='trigger'>
+            <input type='hidden' name='form-name' value='contact'>
             <p class='control'>
-              <input id='name' type='text' name='name' class='input' placeholder='Name'>
+              <input id='name' type='text' name='name' class='input' placeholder='Name' required>
             </p>
             <p class='control'>
-              <input id='email' type='email' name='email' class='input' placeholder='Email'>
+              <input id='email' type='email' name='email' class='input' placeholder='Email' required>
             </p>
             <p class='control'>
               <input id='company-name' type='text' name='company name' class='input' placeholder='Company Name'>
             </p>
             <p class='control'>
-              <textarea id='message' rows='3' class='textarea' placeholder='Message'></textarea>
+              <textarea id='message' name='message' rows='3' class='textarea' placeholder='Message' required></textarea>
             </p>
             <p v-show='false'>
               <input name='trigger'>
