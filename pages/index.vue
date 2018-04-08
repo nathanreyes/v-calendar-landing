@@ -12,7 +12,7 @@
     </ul>
     <div class='calendars'>
       <no-ssr>
-        <transition name='calendar'>
+        <transition :name='calendarTransition'>
           <ex-calendar
             v-show='selectedMenuItem === "calendar"'>
           </ex-calendar>
@@ -112,7 +112,13 @@ export default {
         { title: 'Date Picker', value: 'datepicker' },
       ],
       selectedMenuItem: 'calendar',
+      calendarTransition: 'fade',
     };
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.calendarTransition = 'calendar';
+    });
   },
 };
 </script>
@@ -124,7 +130,7 @@ export default {
   display: flex;
   justify-content: space-around;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 0 auto 0.8em auto;
   li {
     display: flex;
     align-items: center;
@@ -181,9 +187,30 @@ export default {
   }
 }
 
+$translate: 30px;
+$transition: all 0.5s ease-in-out;
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: $transition;
+}
+
+.fade-leave-active {
+  position: absolute;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-leave-to {
+  transform: translateX(-$translate);
+}
+
 .calendar-enter-active,
 .calendar-leave-active {
-  transition: all 0.5s ease-in-out;
+  transition: $transition;
 }
 
 .calendar-leave-active {
@@ -193,12 +220,12 @@ export default {
 .calendar-enter,
 .calendar-leave-to {
   opacity: 0;
-  transform: translateX(-30px);
+  transform: translateX(-$translate);
 }
 
 .datepicker-enter-active,
 .datepicker-leave-active {
-  transition: all 0.5s ease-in-out;
+  transition: $transition;
 }
 
 .datepicker-leave-active {
@@ -208,7 +235,7 @@ export default {
 .datepicker-enter,
 .datepicker-leave-to {
   opacity: 0;
-  transform: translateX(30px);
+  transform: translateX($translate);
 }
 
 .banner {

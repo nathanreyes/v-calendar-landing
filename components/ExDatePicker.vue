@@ -12,28 +12,22 @@
       show-caps>
     </v-date-picker>
   </div>
-  <div class='container'>
-    <div class='columns'>
-      <div class='column'></div>
-      <div class='column is-two-thirds content is-size-5 has-text-centered'>
-        <p>
-          Oh, and there's a date picker that can do everything VCalendar can do with extra support for
-          <a class='has-text-primary' href='#' @click.prevent='enableSingleMode'>single date</a>,
-          <a class='has-text-primary' href='#' @click.prevent='enableMultipleMode'>multiple date</a> and
-          <a class='has-text-primary' href='#' @click.prevent='enableRangeMode'>date range</a> selections.
-        </p>
-        <p>
-          You can even disable complex date patterns like
-          <a class='has-text-primary' href='#' @click.prevent='disableWeekends'>weekends</a>,
-          <a class='has-text-primary' href='#' @click.prevent='disableDays'>the 1st and 15th</a> or the
-          <a class='has-text-primary' href='#' @click.prevent='disableOrdinalWeekdays'>last Saturday</a> of every month.
-        </p>
-        <p>
-          So...date pickers don't have to be boring after all.
-        </p>
-      </div>
-      <div class='column'></div>
-    </div>
+  <div class='description content is-size-5 has-text-centered'>
+    <p>
+      Oh, and there's a date picker that can do everything VCalendar can do with extra support for
+      <a class='has-text-primary' href='#' @click.prevent='enableSingleMode'>single date</a>,
+      <a class='has-text-primary' href='#' @click.prevent='enableMultipleMode'>multiple date</a> and
+      <a class='has-text-primary' href='#' @click.prevent='enableRangeMode'>date range</a> selections.
+    </p>
+    <p>
+      You can even disable complex date patterns like
+      <a class='has-text-primary' href='#' @click.prevent='disableWeekends'>weekends</a>,
+      <a class='has-text-primary' href='#' @click.prevent='disableDays'>the 1st and 15th</a> or the
+      <a class='has-text-primary' href='#' @click.prevent='disableOrdinalWeekdays'>last Saturday</a> of every month.
+    </p>
+    <p>
+      So...date pickers don't have to be boring after all.
+    </p>
   </div>
 </div>
 </template>
