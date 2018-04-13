@@ -97,7 +97,7 @@
 <script>
 import ExCalendar from '@/components/ExCalendar';
 import ExDatePicker from '@/components/ExDatePicker';
-import Package from '@/../v-calendar/package.json';
+import Package from '@/package.json';
 
 export default {
   components: {
@@ -106,7 +106,7 @@ export default {
   },
   data() {
     return {
-      version: Package.version,
+      version: Package.dependencies['v-calendar'],
       menuItems: [
         { title: 'Calendar', value: 'calendar' },
         { title: 'Date Picker', value: 'datepicker' },
